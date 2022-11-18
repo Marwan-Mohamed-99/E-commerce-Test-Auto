@@ -1,0 +1,246 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>21/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Oct 10 02:03:25 EET 2022</td>
+</tr>
+<tr><td>Total time:</td><td>413 seconds (413798 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user clicks follow us icons", "test follow us"</td>
+<td><div><pre>java.lang.AssertionError: expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]
+	at org.example.stepDefs.followUsFeatureSteps.checkOnUrl(followUsFeatureSteps.java:34)
+	at ?.user should go to selected &quot;https://demo.nopcommerce.com/new-online-store-is-open&quot;(file:///C:/Users/ahmed/IdeaProjects/CucumberProject/src/main/resources/features/followUs.feature:7)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace885481831", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace885481831'><pre>java.lang.AssertionError: expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefs.followUsFeatureSteps.checkOnUrl(followUsFeatureSteps.java:34)
+	at ?.user should go to selected &quot;https://demo.nopcommerce.com/new-online-store-is-open&quot;(file:///C:/Users/ahmed/IdeaProjects/CucumberProject/src/main/resources/features/followUs.feature:7)
+</pre></div></td>
+<td>13</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "test nokia pic", "test slider"</td>
+<td><div><pre>java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.example.stepDefs.sliderFeatureSteps.checkOnNokiaUrl(sliderFeatureSteps.java:27)
+	at ?.user should navigate to Nokia page(file:///C:/Users/ahmed/IdeaProjects/CucumberProject/src/main/resources/features/slider.feature:7)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1736804080", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1736804080'><pre>java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefs.sliderFeatureSteps.checkOnNokiaUrl(sliderFeatureSteps.java:27)
+	at ?.user should navigate to Nokia page(file:///C:/Users/ahmed/IdeaProjects/CucumberProject/src/main/resources/features/slider.feature:7)
+</pre></div></td>
+<td>10</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "test iphone pic", "test slider"</td>
+<td><div><pre>java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.example.stepDefs.sliderFeatureSteps.checkOnIphoneUrl(sliderFeatureSteps.java:37)
+	at ?.user should navigate to iphone page(file:///C:/Users/ahmed/IdeaProjects/CucumberProject/src/main/resources/features/slider.feature:11)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace765321860", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace765321860'><pre>java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefs.sliderFeatureSteps.checkOnIphoneUrl(sliderFeatureSteps.java:37)
+	at ?.user should navigate to iphone page(file:///C:/Users/ahmed/IdeaProjects/CucumberProject/src/main/resources/features/slider.feature:11)
+</pre></div></td>
+<td>10</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enter invalid Data", "Test Login Functionality"</td>
+<td></td>
+<td>31</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check on wish list cart", "test wish list"</td>
+<td></td>
+<td>16</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": search products with name", "test search"</td>
+<td></td>
+<td>38</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user didn't enter the same password", "test register"</td>
+<td></td>
+<td>20</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": search products with sku", "test search"</td>
+<td></td>
+<td>15</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": search products with sku", "test search"</td>
+<td></td>
+<td>28</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": search products with sku", "test search"</td>
+<td></td>
+<td>14</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enter invalid email form", "Test Login Functionality"</td>
+<td></td>
+<td>13</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user clicks follow us icons", "test follow us"</td>
+<td></td>
+<td>14</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "test add HTC to wish list", "test wish list"</td>
+<td></td>
+<td>10</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user didn't enter any data", "test register"</td>
+<td></td>
+<td>16</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user clicks follow us icons", "test follow us"</td>
+<td></td>
+<td>16</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user forget Password", "Test Login Functionality"</td>
+<td></td>
+<td>14</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "change currency to euro", "test currency"</td>
+<td></td>
+<td>14</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enter Valid Data", "Test Login Functionality"</td>
+<td></td>
+<td>15</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": search products with name", "test search"</td>
+<td></td>
+<td>12</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": search products with name", "test search"</td>
+<td></td>
+<td>12</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user clicks follow us icons", "test follow us"</td>
+<td></td>
+<td>18</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "test random hover", "test hover to categories"</td>
+<td></td>
+<td>13</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "email already exist", "test register"</td>
+<td></td>
+<td>17</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+<tr>
+<td title='org.example.testRunner.simulator.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.simulator<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with valid data", "test register"</td>
+<td></td>
+<td>21</td>
+<td>org.example.testRunner.simulator@13c27452</td></tr>
+</table><p>
+</body>
+</html>
